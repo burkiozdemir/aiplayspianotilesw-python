@@ -6,7 +6,7 @@ def click(x,y):
     win32api.SetCursorPos((x,y))
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
 
-while keyboard.is_pressed('esc') == False:
+while not keyboard.is_pressed('esc'):
 
     if pyautogui.pixel(500, 334)[0] == 0:
         click(500, 334)
